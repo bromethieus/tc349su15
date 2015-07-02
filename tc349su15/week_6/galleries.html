@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: 'Lora', sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #82B83B;
+  border: solid 10px #FFFB53;
+  border-radius: 12px;  
+}
+div {
+  height: 400px;
+  width: 380px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 100px;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  font-size: 75px;
+  color: #B53507;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: white;
+  margin: 10px 0 40px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 20px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("images/hornbe11.jpg");
+}
+.second{
+  background-image: url("images/juniper-bonsai1.jpg");
+}
+.third{
+  background-image: url("images/trident_maple.jpg");
+}
+
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    height: 300px;
+    width: 280px;
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>the bonsai nook</h1>
+<h2>where we share our bonsai</h2>
+	<ul>
+   	<li><a href="event.html">Events and Meetings</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Info</a></li>
+   </ul>
+<div class="first">
+  <p>American Hornbeam <br />
+  <small>A good tree for beginners as it hardy to both root and foliage 
+  pruning and grow in a variety of environments provided it is watered 
+  regularly. </small></p>
+</div>
+
+<div class="second">
+  <p>Juniper <br />
+  <small>Juniper can be rewarding trees if properly cared for. It is still
+  suitable for beginners with a space with plenty of morning sun and can 
+  water the tree in the morning to assure proper growth.</small></p>
+</div>
+  
+<div class="third">
+  <p>Trident Maple <br />
+  <small>Trident Maples are highly desired due to their small leaves and thick gnarly 
+  roots. They prefer full sun and will be most vibrant and successful grown in those 
+  conditions.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
